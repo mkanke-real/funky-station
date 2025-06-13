@@ -232,3 +232,37 @@
     offset: 0
     table: !type:NestedSelector
       tableId: RandomToolbox
+
+- type: entity
+  name: Random Wall Spawner
+  id: RandomWallSpawner50
+  parent: MarkerBase
+  suffix: 50
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Walls/solid.rsi
+      state: rainbow_solid50
+  - type: RandomSpawner
+    prototypes:
+    - WallSolid
+    - WallSolidRust
+    chance: 0.50
+
+- type: entity
+  name: Random Wall Spawner
+  id: RandomWallSpawner
+  parent: MarkerBase
+  suffix:
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Walls/solid.rsi
+      state: rainbow_solid
+  - type: RandomSpawner
+    prototypes:
+    - WallSolid
+    - WallSolidRust
+    chance: 1

@@ -103,6 +103,12 @@
     },
     {
       "name": "reinforced_wall_girder"
+    },
+    {
+      "name": "rainbow_solid"
+    },
+    {
+      "name": "rainbow_solid50"
     }
   ]
 }
