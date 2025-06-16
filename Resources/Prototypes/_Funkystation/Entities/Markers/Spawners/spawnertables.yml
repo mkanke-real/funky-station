@@ -33,16 +33,6 @@
         weight: 1
 
 - type: entityTable
-  id: MaintLocker50
-  table: !type:GroupSelector
-    children:
-    - !type:GroupSelector
-      weight: 100
-      children:
-      - id: ClosetMaintenanceFilledRandom
-        weight: 1
-
-- type: entityTable
   id: RandomToolbox
   table: !type:GroupSelector
     children:
@@ -100,4 +90,18 @@
       - id: CrowbarCutePurple
         weight: 1
       - id: CrowbarCutePink
+        weight: 1
+
+- type: entityTable
+  id: SolarRandom
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 100
+      children:
+      - id: SolarPanel
+        weight: 2
+      - id: SolarPanelBroken
+        weight: 1
+      - id: SolarAssembly
         weight: 1

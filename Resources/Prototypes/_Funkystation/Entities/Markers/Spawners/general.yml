@@ -25,6 +25,8 @@
     - state: red
     - sprite: Structures/Furniture/chairs.rsi
       state: rainbow_chair
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
   - type: EntityTableSpawner
     offset: 0
     table: !type:NestedSelector
@@ -35,7 +37,11 @@
   name: Random Donkpocket Spawner
   id: RandomDonkpocketSpawner
   parent: MarkerBase
+  placement:
+    mode: PlaceFree
   components:
+  - type: Transform
+    anchored: false
   - type: Sprite
     layers:
     - state: red
@@ -46,3 +52,149 @@
     table: !type:NestedSelector
       tableId: RandomDonkpocketTable
 
+- type: entity
+  name: Random Donkpocket Spawner
+  id: RandomDonkpocketSpawner50
+  parent: MarkerBase
+  suffix: 50
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Funkystation/Objects/Consumable/Food/Baked/rainbow_donkpocket.rsi
+      state: rainbow_donkpocket
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: RandomDonkpocketTable
+      prob: 0.5
+
+- type: entity
+  name: Random Wall Spawner
+  id: RandomWallSpawner50
+  parent: MarkerBase
+  suffix: 50
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Walls/solid.rsi
+      state: rainbow_solid
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
+  - type: RandomSpawner
+    prototypes:
+    - WallSolid
+    - WallSolidRust
+    chance: 0.50
+
+- type: entity
+  name: Random Wall Spawner
+  id: RandomWallSpawner
+  parent: MarkerBase
+  suffix:
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Walls/solid.rsi
+      state: rainbow_solid
+  - type: RandomSpawner
+    prototypes:
+    - WallSolid
+    - WallSolidRust
+    chance: 1
+
+- type: entity
+  name: Girder Spawner
+  id: GirderSpawner50
+  parent: MarkerBase
+  suffix: 50
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Walls/solid.rsi
+      state: wall_girder
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
+  - type: RandomSpawner
+    prototypes:
+    - Girder
+    chance: 0.50
+
+- type: entity
+  name: Random Barricade Spawner
+  id: RandomBarricade50
+  parent: MarkerBase
+  suffix: 50
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/barricades.rsi
+      state: rainbow_barricade
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
+  - type: RandomSpawner
+    prototypes:
+    - Barricade
+    - BarricadeBlock
+    chance: 0.50
+
+- type: entity
+  name: Random Barricade Spawner
+  id: RandomBarricadeSpawner
+  parent: MarkerBase
+  suffix:
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/barricades.rsi
+      state: rainbow_barricade
+  - type: RandomSpawner
+    prototypes:
+    - Barricade
+    - BarricadeBlock
+    chance: 1
+
+- type: entity
+  name: Random Solar Panel Spawner
+  id: RandomSolarPanelSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Power/Generation/solar_panel.rsi
+      state: rainbow_solar_panel
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: SolarRandom
+
+- type: entity
+  name: Random Solar Panel Spawner
+  id: RandomSolarPanelSpawner50
+  parent: MarkerBase
+  suffix: 50
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Power/Generation/solar_panel.rsi
+      state: rainbow_solar_panel
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: SolarRandom
+      prob: 0.5

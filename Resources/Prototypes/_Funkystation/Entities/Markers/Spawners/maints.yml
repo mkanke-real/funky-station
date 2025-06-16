@@ -1,6 +1,6 @@
 - type: entity
   name: Liquid Tank Spawner
-  id: RandomTankSpawner
+  id: RandomTankSpawner50
   parent: MarkerBase
   suffix: 50
   placement:
@@ -11,6 +11,8 @@
     - state: red
     - sprite: Structures/Storage/tanks.rsi
       state: rainbow_tank
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
   - type: EntityTableSpawner
     offset: 0
     table: !type:NestedSelector
@@ -19,7 +21,7 @@
 
 - type: entity
   name: Liquid Tank Spawner
-  id: RandomTankSpawner100
+  id: RandomTankSpawner
   parent: MarkerBase
   suffix: 100
   placement:
@@ -48,11 +50,12 @@
     - state: red
     - sprite: Structures/Storage/closet.rsi
       state: generic_icon
-  - type: EntityTableSpawner
-    offset: 0
-    table: !type:NestedSelector
-      tableId: MaintLocker50
-      prob: 0.5
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
+  - type: RandomSpawner
+    prototypes:
+    - ClosetMaintenanceFilledRandom
+    chance: 0.5
 
 - type: entity
   name: Random Maint Locker Spawner
@@ -67,6 +70,8 @@
     - state: red
     - sprite: Structures/Storage/closet.rsi
       state: rainbow_locker
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
   - type: EntityTableSpawner
     offset: 0
     table: !type:NestedSelector
@@ -202,13 +207,17 @@
   parent: MarkerBase
   suffix: 50
   placement:
-    mode: SnapgridCenter
+    mode: PlaceFree
   components:
+  - type: Transform
+    anchored: false
   - type: Sprite
     layers:
     - state: red
     - sprite: _Funkystation/Objects/Tools/rainbow_toolbox.rsi
       state: rainbow_toolbox
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
   - type: EntityTableSpawner
     offset: 0
     table: !type:NestedSelector
@@ -221,8 +230,10 @@
   parent: MarkerBase
   suffix: 100
   placement:
-    mode: SnapgridCenter
+    mode: PlaceFree
   components:
+  - type: Transform
+    anchored: false
   - type: Sprite
     layers:
     - state: red
@@ -237,7 +248,11 @@
   name: Random Crowbar Spawner
   id: RandomCrowbarSpawner
   parent: MarkerBase
+  placement:
+    mode: PlaceFree
   components:
+  - type: Transform
+    anchored: false
   - type: Sprite
     layers:
     - state: red
@@ -247,3 +262,26 @@
     offset: 0
     table: !type:NestedSelector
       tableId: CrowbarRandom
+
+- type: entity
+  name: Random Crowbar Spawner
+  id: RandomCrowbarSpawner50
+  parent: MarkerBase
+  suffix: 50
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Funkystation/Objects/Tools/cutecrowbar.rsi
+      state: rainbow_crowbar
+    - sprite: _Funkystation/Markers/50marker.rsi
+      state: 50marker_filled
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: CrowbarRandom
+      prob: 0.5
