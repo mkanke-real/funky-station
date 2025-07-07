@@ -1,0 +1,48 @@
+- type: decal
+  id: fa_single
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Funkystation/Decals/floor_arrow.rsi
+    state: fa_single
+
+- type: decal
+  id: fa_turn
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Funkystation/Decals/floor_arrow.rsi
+    state: fa_turn
+
+- type: decal
+  id: fa_turn_flipped
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Funkystation/Decals/floor_arrow.rsi
+    state: fa_turn_flipped
+
+- type: decal
+  id: fa_tway
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Funkystation/Decals/floor_arrow.rsi
+    state: fa_tway
+
+- type: decal
+  id: fa_4way
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Funkystation/Decals/floor_arrow.rsi
+    state: fa_4way
+
+- type: decal
+  id: fa_3way_right
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Funkystation/Decals/floor_arrow.rsi
+    state: fa_3way_right
+
+- type: decal
+  id: fa_3way_left
+  tags: ["station", "markings"]
+  sprite:
+    sprite: _Funkystation/Decals/floor_arrow.rsi
+    state: fa_3way_left

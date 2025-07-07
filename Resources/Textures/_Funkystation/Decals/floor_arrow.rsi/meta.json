@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by mkanke for ",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "fa_single"
+    },
+    {
+      "name": "fa_turn"
+    },
+    {
+      "name": "fa_turn_flipped"
+    },
+    {
+      "name": "fa_3way_right"
+    },
+    {
+      "name": "fa_3way_left"
+    },
+    {
+      "name": "fa_4way"
+    },
+    {
+      "name": "fa_tway"
+    }
+  ]
+}
