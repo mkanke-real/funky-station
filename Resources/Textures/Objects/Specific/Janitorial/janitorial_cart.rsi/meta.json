@@ -135,6 +135,18 @@
                     0.2
                 ]
             ]
+        },
+        {
+            "name": "cart-redswatter",
+            "directions": 4
+        },
+        {
+            "name": "cart-blueswatter",
+            "directions": 4
+        },
+        {
+            "name": "cart-greenswatter",
+            "directions": 4
         }
     ]
 }

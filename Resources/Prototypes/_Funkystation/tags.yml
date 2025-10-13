@@ -82,3 +82,15 @@
 
 - type: Tag
   id: CardboardboxLargeFlat
+
+- type: Tag
+  id: Flyswatter
+
+- type: Tag
+  id: FlyswatterRed
+
+- type: Tag
+  id: FlyswatterBlue
+
+- type: Tag
+  id: FlyswatterGreen

@@ -162,3 +162,87 @@
   - type: Tag
     tags:
     - MopSword
+
+- type: entity
+  name: red flyswatter
+  parent: BaseItem
+  id: FlyswatterRed
+  description: Bee's begone!
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Objects/Specific/Janitorial/flyswatter_red.rsi
+    state: icon
+  - type: Appearance
+  - type: Item
+    sprite: _Funkystation/Objects/Specific/Janitorial/flyswatter_red.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 1
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    reflectProb: .1
+    spread: 90
+  - type: Tag
+    tags:
+    - Flyswatter
+    - FlyswatterRed
+
+- type: entity
+  name: blue flyswatter
+  parent: BaseItem
+  id: FlyswatterBlue
+  description: Bee's begone!
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Objects/Specific/Janitorial/flyswatter_blue.rsi
+    state: icon
+  - type: Appearance
+  - type: Item
+    sprite: _Funkystation/Objects/Specific/Janitorial/flyswatter_blue.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 1
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    reflectProb: .1
+    spread: 90
+  - type: Tag
+    tags:
+    - Flyswatter
+    - FlyswatterBlue
+
+- type: entity
+  name: green flyswatter
+  parent: BaseItem
+  id: FlyswatterGreen
+  description: Bee's begone!
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Objects/Specific/Janitorial/flyswatter_green.rsi
+    state: icon
+  - type: Appearance
+  - type: Item
+    sprite: _Funkystation/Objects/Specific/Janitorial/flyswatter_green.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 1
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    reflectProb: .1
+    spread: 90
+  - type: Tag
+    tags:
+    - Flyswatter
+    - FlyswatterGreen
