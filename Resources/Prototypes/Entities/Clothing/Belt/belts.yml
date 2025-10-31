@@ -319,6 +319,9 @@
         - WetFloorSign
         - HolosignProjector
         - Plunger
+        - FlyswatterRed
+        - FlyswatterBlue
+        - FlyswatterGreen
       components:
         - LightReplacer
         - SmokeOnTrigger

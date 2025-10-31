@@ -246,3 +246,21 @@
     tags:
     - Flyswatter
     - FlyswatterGreen
+
+- type: entity
+  parent: MarkerBase
+  id: FlyswatterRandom
+  name: random flyswatter spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Funkystation/Objects/Specific/Janitorial/flyswatter_red.rsi
+      state: icon
+  - type: RandomSpawner
+    offset: 0
+    prototypes:
+    - FlyswatterRed
+    - FlyswatterBlue
+    - FlyswatterGreen
+    chance: 1

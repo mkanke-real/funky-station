@@ -511,6 +511,15 @@
   - JanitorPrismaticPlunger
 
 - type: loadoutGroup
+  id: JanitorFlyswatter
+  name: loadout-group-janitor-flyswatter
+  minLimit: 0
+  loadouts:
+  - JanitorFlyswatterRed
+  - JanitorFlyswatterBlue
+  - JanitorFlyswatterGreen
+
+- type: loadoutGroup
   id: BotanistHead
   name: loadout-group-botanist-head
   minLimit: 0
