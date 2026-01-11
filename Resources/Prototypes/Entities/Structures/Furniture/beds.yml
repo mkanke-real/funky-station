@@ -111,6 +111,9 @@
     layers:
       - state: bed-MED
       - map: ["tank"]
+      - state: paper
+        sprite: Structures/Furniture/bookshelf.rsi
+        map: [ "enum.PaperLabelVisuals.Layer" ]
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -122,6 +125,23 @@
           Generic:  { state: tank_3, visible: true }
           Plasma:  { state: tank_4, visible: true }
           Nitrous:  { state: tank_5, visible: true }
+      enum.PaperLabelVisuals.HasLabel:
+        enum.PaperLabelVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PaperLabelVisuals.LabelType:
+        enum.PaperLabelVisuals.Layer:
+          Paper: { state: paper }
+  - type: PaperLabel
+    labelSlot:
+      insertVerbText: comp-paper-label-insert
+      ejectVerbText: comp-paper-label-eject
+      whitelist:
+        components:
+        - Paper
+      blacklist:
+        tags:
+        - Book
   - type: HealOnBuckle
     damage:
       types:
@@ -142,6 +162,7 @@
   - type: ContainerContainer
     containers:
       gasTankSlot: !type:ContainerSlot {}
+      paper_label: !type:ContainerSlot
   - type: BedInternals
     slot: gasTankSlot
     maskPrototype: ClothingMaskBreathMedicalBed
@@ -151,6 +172,74 @@
   - type: GuideHelp
     guides:
     - MedicalDoctor
+
+- type: entity
+  parent: MedicalBed
+  id: MedicalBedOxygen
+  name: medical bed
+  description: A hospital bed for patients to recover in. Resting here provides fairly slow healing.
+  suffix: Oxygen
+  components:
+  - type: ItemSlots
+    slots:
+      gasTankSlot:
+        name: comp-gas-canister-slot-name-gas-tank
+        startingItem: OxygenTankFilled
+        whitelist:
+          components:
+          - GasTank
+        insertOnInteract: true
+
+- type: entity
+  parent: MedicalBed
+  id: MedicalBedNitrogen
+  name: medical bed
+  description: A hospital bed for patients to recover in. Resting here provides fairly slow healing.
+  suffix: Nitrogen
+  components:
+  - type: ItemSlots
+    slots:
+      gasTankSlot:
+        name: comp-gas-canister-slot-name-gas-tank
+        startingItem: NitrogenTankFilled
+        whitelist:
+          components:
+          - GasTank
+        insertOnInteract: true
+
+- type: entity
+  parent: MedicalBed
+  id: MedicalBedPlasma
+  name: medical bed
+  description: A hospital bed for patients to recover in. Resting here provides fairly slow healing.
+  suffix: Plasma
+  components:
+  - type: ItemSlots
+    slots:
+      gasTankSlot:
+        name: comp-gas-canister-slot-name-gas-tank
+        startingItem: PlasmaTankFilled
+        whitelist:
+          components:
+          - GasTank
+        insertOnInteract: true
+
+- type: entity
+  parent: MedicalBed
+  id: MedicalBedAirmix
+  name: medical bed
+  description: A hospital bed for patients to recover in. Resting here provides fairly slow healing.
+  suffix: Airmix
+  components:
+  - type: ItemSlots
+    slots:
+      gasTankSlot:
+        name: comp-gas-canister-slot-name-gas-tank
+        startingItem: AirTankFilled
+        whitelist:
+          components:
+          - GasTank
+        insertOnInteract: true
 
 - type: entity
   parent: Bed
